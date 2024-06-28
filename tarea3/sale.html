@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DIC cafe</title>
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/sale.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navegacion_encabezado">
+        <a href="index.html" class="logo">
+          <img src="images/sample_logo_k.png" />
+        </a>
+        <ul class="navegacion_global">
+          <a href="index.html" class="item_navegacion_global">
+            <li>Inicio</li>
+          </a>
+          <a href="#menu" class="item_navegacion_global">
+            <li>Menú</li>
+          </a>
+          <a href="contact.html" class="item_navegacion_global">
+            <li>Contacto</li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <section class="seccion_interna">
+      <div class="titulo_seccion">
+        <h1>Venta de café en grano</h1>
+      </div>
+    </section>
+
+    <section class="seccion_interna seccion_menu">
+      <div class="centro">
+        <h1 class="titulo_menu">Gama de productos</h1>
+      </div>
+      <ul class="lista_menu menu_cafe">
+        <li class="item_lista_menu_cafe">
+          <div class="contenido_menu_cafe">
+            <h2 class="titulo_item_menu">Mezcla original 200 g</h2>
+            <p class="precio_menu_cafe">500 guaraníes</p>
+          </div>
+          <img src="images/sample_cafe1.jpg" class="imagen_menu_cafe" />
+        </li>
+        <li class="item_lista_menu_cafe">
+          <div class="contenido_menu_cafe">
+            <h2 class="titulo_item_menu">Mezcla original 500 g</h2>
+            <p class="precio_menu_cafe">900 guaraníes</p>
+          </div>
+          <img src="images/sample_cafe1.jpg" class="imagen_menu_cafe" />
+        </li>
+        <li class="item_lista_menu_cafe">
+          <div class="contenido_menu_cafe">
+            <h2 class="titulo_item_menu">Mezcla especial 200 g</h2>
+            <p class="precio_menu_cafe">700 guaraníes</p>
+          </div>
+          <img src="images/sample_cafe3.jpg" class="imagen_menu_cafe" />
+        </li>
+        <li class="item_lista_menu_cafe">
+          <div class="contenido_menu_cafe">
+            <h2 class="titulo_item_menu">Mezcla especial 500 g</h2>
+            <p class="precio_menu_cafe">1.200 guaraníes.</p>
+          </div>
+          <img src="images/sample_cafe3.jpg" class="imagen_menu_cafe" />
+        </li>
+      </ul>
+      <h2>Gastos de envío.</h2>
+      <ul>
+        <li>
+          500 guaraníes por gastos de envío si el importe total es inferior a 2000 guaraníes.
+        </li>
+        <li>250 guaraníes por un mínimo de 2.000 guaraníes.</li>
+        <li>Gratuito a partir de 3.000 guaraníes.</li>
+      </ul>
+    </section>
+
+    <section class="seccion_interna">
+      <h2>Realice su pedido</h2>
+      <form>
+        <p>Seleccione un producto</p>
+        <div>
+          <select id="producto" required>
+            <option hidden value="0">Por favor, seleccione.</option>
+            <option value="1">Mezcla original 200g 500 guaraníes</option>
+            <option value="2">Mezcla original 500g 900 guaraníes</option>
+            <option value="3">Mezcla especial 200g 700 guaraníes</option>
+            <option value="4">Mezcla especial 500g, 1.200 guaraníes.</option>
+          </select>
+          <p>Seleccione la cantidad</p>
+          <input type="number" min="1" max="5" id="cantidad" value="1" required />
+        </div>
+        <br />
+        <input type="button" class="boton" value="Añadir" onclick="add()" />
+        <input type="button" class="boton" value="Importe total"  onclick="calc()" />
+      </form>
+    </section>
+    <script type="text/javascript" src="javascript/sale.js"></script>
+  </body>
+</html>
