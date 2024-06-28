@@ -78,3 +78,14 @@ function calcPostageFromPurchase(sum) {
     return 250;
   }
 }
+// funsion que calcula el total a gastar
+function calc() {
+  const sum = subtotal();
+  const postage = calcPostageFromPurchase(sum);
+  window.alert(`${display()}\n El subtotal: ${sum} Guaranies.\n Los gastos de envío son: ${postage} Guaranies.\n Total: ${
+      sum + postage
+    } Guaranies.`);
+  purchases = [];
+  priceElement.value = "";
+  numberElement.value = "";
+}
